@@ -1,38 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration-style: none;
+  overflow: hidden;
+  font-family: sans-serif;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: #fff;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  height: 100vh;
+  margin: auto;
+  max-width: 1440px;
+}
+.subtitle {
+  font-size: 32px;
+  font-weight: 600;
+}
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  padding: 30px;
+}
+
+p {
+  text-align: justify;
+  max-height: 50vh;
+  overflow-y: auto;
+  color: crimson;
+}
+.table-key {
+  background-color: black;
   color: white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 5px;
+}
+h1 {
+  padding: 15px 20px;
+}
+.table-value {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+}
+.table-value div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(20, 155, 20);
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 25px;
+  font-size: large;
+  margin: 10px;
+  display: flex;
+  align-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  border: none;
+  outline: none;
+  padding: 20px;
+  flex: 1;
+  font-size: large;
+}
+input[type="datetime-local"] {
+  margin-right: 100px;
+}
+.add-task {
+  background-color: rgb(248, 248, 248);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+.add-task button {
+  height: 40px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: red;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.add-task button:hover {
+  scale: 1.1;
+  transition: all 0.2s ease-in-out;
+}
+.add-task:hover {
+  box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.add-task:nth-child(odd) {
+  background-color: rgb(223, 253, 255);
+}
+.add-task:nth-child(even) {
+  background-color: rgb(234, 242, 255);
+}
+.completed {
+  background-color: lightgray !important;
+  opacity: 0.5;
+}
+.completed:hover {
+  box-shadow: none;
 }
